@@ -7,6 +7,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
+import CardsDisplay from './components/CardsDisplay';
 
 
 
@@ -26,7 +27,7 @@ function App() {
                      
              </Routes>
          
-         
+         <CardsDisplay></CardsDisplay>
          </Router>
          </>
   )

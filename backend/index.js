@@ -49,11 +49,19 @@ catch (err) {
 }
 });
 
+// ----------------------------------------------------------------
+
+const list_routes= require('./routes/datalists');
+
+app.use('/api', list_routes);
 
 
 
 
 
+
+
+//----------------------------------------------------------------
 
 
 
@@ -64,4 +72,4 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
-});
+})

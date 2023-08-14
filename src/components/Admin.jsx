@@ -77,7 +77,7 @@ const handleSubmit = (e) => {
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="m-5">
       <div className="mb-3">
         <label htmlFor="name" className="form-label">Name:</label>
         <input
