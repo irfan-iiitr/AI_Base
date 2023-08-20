@@ -40,3 +40,50 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+
+
+.input {
+  background-color: #383838;
+  border: 1ex solid none;
+  border-top-width: 1.7em;
+  margin-left: -40px;
+  padding: 0;
+  color: #383838;
+  word-wrap: break-word;
+  outline: 7px solid #383838;
+  height: 50px;
+  font-size: 17px;
+  text-align: center;
+  transition: all 1s;
+  width: 490px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+ }
+ 
+ .input:hover {
+  border-top-width: 0.2em;
+  background-color: #f1e8e8;
+ }
+ 
+ .input:focus {
+  border-top-width: 0.2em;
+  background-color: #f1e8e8;
+ }
+
+ .search_btn{
+  margin-left: 20px !important;
+  background-color: black !important;
+  color: aliceblue;
+  position: relative;
+  border-radius: 0px !important;
+ }
+
+ .homepage{
+  margin: 30px;
+  padding: 20px;
+  margin-top: 100px;
+  position: inherit;
+ }

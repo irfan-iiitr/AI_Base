@@ -10,21 +10,7 @@ async function connectToMongoDB() {
   try {
     await mongoose.connect(mongoURI, { useNewUrlParser: true });
     console.log("Connected to MongoDB..at last");
-    //const collection = mongoose.connection.db.collection("aitools");
-    
-    // collection.find({}).toArray(async function (err, data) {
-    //     const foodCategory = await mongoose.connection.db.collection("foodcategory");
-    //     foodCategory.find({}).toArray(function (err, catData) {
-    //        if(err) console.log(err);
-    //        else
-    //        {
-    //         global.food_items=data;
-    //         global.foodCategory=catData;
-    //        }
-          
-    //   })
-
-    // })
+   
     
 
 }

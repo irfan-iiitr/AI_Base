@@ -16,6 +16,7 @@ const AdminPanel = () => {
   const [imageLink, setImageLink] = useState('');
   const [productLink, setProductLink] = useState('');
   const [authorName, setAuthorName] = useState('');
+  const [category, setcategory] = useState('');
 
   // const handleSubmit =( async (event)=>{
   //   event.preventDefault();
@@ -60,7 +61,8 @@ const handleSubmit = (e) => {
           date:launchDate,
           imglink:imageLink,
           productlink:productLink,
-          authorname:authorName
+          authorname:authorName,
+          category:category
     })
     .then(response => {
       console.log('Response:', response.data);
@@ -140,6 +142,17 @@ const handleSubmit = (e) => {
           id="authorName"
           value={authorName}
           onChange={(e) => setAuthorName(e.target.value)}  required
+        />
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="category" className="form-label">Category Name:</label>
+        <input
+          type="text"
+          className="form-control"
+          id="category"
+          value={category}
+          onChange={(e) => setcategory(e.target.value)}  required
         />
       </div>
 

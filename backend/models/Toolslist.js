@@ -25,6 +25,10 @@ const ailist = new Schema({
     authorname:{
         type: String,
         // required: true
+    },
+    category:{
+        type: String,
+        // required: true
     }
 });
 

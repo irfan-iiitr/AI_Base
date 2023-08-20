@@ -33,13 +33,14 @@ app.post('/admin' , async(req, res) => {
     date,
     imglink,
     productlink,
-    authorname
+    authorname,
+    category
   } = req.body;
 
   // console.log(description)
 
 try{
-  const data= new list({ name, description,date,  imglink, productlink, authorname});
+  const data= new list({ name, description,date,  imglink, productlink, authorname,category});
   data.save();
  
   return res.status(200).json({success: true});
