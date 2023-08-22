@@ -12,6 +12,9 @@ import '../assets/css/homecss.css'
 
 
 function NavBar() {
+  //console.log(localStorage.getItem('user:token'));
+  const [user,setUser] = useState(JSON.parse(localStorage.getItem('user:detail')))
+  console.log('user:detail',user.fname);
   return (
     <Navbar bg="light" expand="lg" fixed="top">
       <Container>
@@ -27,10 +30,13 @@ function NavBar() {
             <Nav.Link href="/science">Science</Nav.Link>
             <Nav.Link href="/sports">Sports</Nav.Link>
             <Nav.Link href="/technology">Technology</Nav.Link>
-       
-      
-            <Link to='/admin'><button>LOGIN</button></Link>
-      
+       {
+                       !(localStorage.getItem('user:token'))?<><Link to='/login'><button>Login</button></Link> <Link to='/register'><button>Register</button></Link> </> : <div className='welcome'> <h4>Welcome {user.fname}</h4> </div>
+
+       }
+
+           
+            
            
           </Nav>
         </Navbar.Collapse>

@@ -8,37 +8,33 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import CardsDisplay from './components/CardsDisplay';
+
+import Screen1 from './components/Screen1'
+import Login from './components/Login'
+import General from './components/General'
 
 // import './index.css'
 
 function App() {
-    const [Que,setQuery]=useState('');
+
      //console.log(query,'query')
   return (
          <>
                 <Router>
              <NavBar></NavBar>
-             <div className="homepage">
-        
-    
+            {/* <Screen1></Screen1> */}
+            
 
-        <div className="search-container">
-       <form >
-       <input type="text" className="input" placeholder="Type your text" onChange={(e)=>setQuery(e.target.value)}></input>
-         <button type="submit" className='search_btn'>Submit</button>
-       </form>
-     </div>
-       </div>
+             
              <Routes>
-             {/* <Route exact path="/" element={<Home></Home>} /> */}
+             <Route exact path="/" element={<Screen1></Screen1>} />
                       {/* <Route path='/c' element={<Categories></Categories>}></Route> */}
                       <Route path='/admin' element={<Admin></Admin>}></Route>
-
-                     
+                      <Route path='/register' element={<Home></Home>}></Route>
+                      <Route path='/login' element={<Login></Login>}></Route>
+                      <Route path='/general' element={<General></General>}></Route>
              </Routes>
-         
-         <CardsDisplay find={Que}></CardsDisplay>
+      
          </Router>
          </>
   )

@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 // import axios from 'axios';
 import Axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+// import { Navigate } from 'react-router-dom';
 
 
 const AdminPanel = () => {
 
   // navigate=useNavigate();
 
-
+   const Navigate= useNavigate();
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [launchDate, setLaunchDate] = useState('');
@@ -67,7 +67,7 @@ const handleSubmit = (e) => {
     .then(response => {
       console.log('Response:', response.data);
       // Handle the response data
-      // navigate('/');
+      Navigate('/');
     })
     .catch(error => {
       console.error('Error:', error);
