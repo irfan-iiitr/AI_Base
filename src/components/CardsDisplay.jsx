@@ -36,6 +36,9 @@ function CardsDisplay(props) {
             
   
       console.log('Data from API:', data);
+
+      // console.log('category wala',category(data.data));
+
       // setlist(data.data);
 
       if(props.find.length > 2)
@@ -60,14 +63,17 @@ function CardsDisplay(props) {
   // search(ailist);
 
   const search =(daata)=>{
-    console.log('search',daata);
-     console.log('props',props.find)
+    // console.log('search',daata);
+    //  console.log('props',props.find)
      return daata.filter((listItems) => listItems.description.includes(props.find))
      
-      
   }
   
-
+  // const category =(daata)=>{
+   
+  //    return daata.filter((listItems) => listItems.category.includes('Website Builder'))
+     
+  // }
 
 
 
@@ -76,7 +82,7 @@ function CardsDisplay(props) {
     <div>
 
 <div className='container my-3 ' style={{width:'100%'}}>
-<button onClick={fetchData}>Fetch Data</button>
+{/* <button onClick={fetchData}>Fetch Data</button> */}
 <div className='row'  >
               
                   {
