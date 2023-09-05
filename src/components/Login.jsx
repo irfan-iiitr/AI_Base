@@ -45,7 +45,7 @@ export default function Login() {
           localStorage.setItem('user:token', resData.token)
           localStorage.setItem('user:detail', JSON.stringify(resData.user))
           
-           navigate('/admin');
+           navigate('/');
         }
         else{
           alert('Enter Correct Credentials');

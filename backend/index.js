@@ -144,7 +144,23 @@ catch(error)
 
 //................................................................
 
+app.get('/api/:category',async(req,res)=>{
+  try{
+      const categoryId = req.params.category;
+      //console.log(categoryId);
 
+      if(categoryId ==='new') return res.status(200).json([]);
+
+      const messages = await list.find({category:{$regex:categoryId}});
+   
+      res.status(200).json(messages);
+  }
+  catch(error)
+  {
+      console.log('error: ' + error);
+  }
+
+})
 
 
 
