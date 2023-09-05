@@ -44,7 +44,7 @@ function CardsDisplay(props) {
       if(props.find.length > 2)
       setlist(search(data.data))
       else
-      setlist(data.data);
+      setlist(data.data); 
       
     } catch (error) {
       console.error('Error fetching data:', error);
